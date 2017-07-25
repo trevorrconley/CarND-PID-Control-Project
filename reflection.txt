@@ -1,0 +1,7 @@
+Describe the effect each of the P, I, D components had in your implementation:
+- The "P" in PID stands for proportional value to the cross-track error; adjusting this value causes the angle to overshoot the crosstrack error and won't ever converge.
+- The "I" stands for integral value; this value will aid in canceling out steering drift as we keep track of all the crosstrack errors that we have observed. 
+- The "D" stands for differential value; adjusting this value allows for a slow convergence to the crosstrack error. It will help in preventing overshoot that comes from the proportional value.
+
+Describe how the final hyperparameters were chosen:
+My final parameters were chosen manually. I first started out with the values given in the YouTube video on the project and slowly worked my way to the final parameters. There were times where I would adjust a value and the car veered wildly in the opposite direction so I knew that with keeping the other values in their current state, the one I had just changed was changed too much. Slowly I got to values that kept the car in the driveable area and decided to use those as the final ones. 
